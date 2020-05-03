@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate1"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.msamil.msaStudio_CircleAreaAndCircumference.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_areaFragment"
+            app:destination="@id/areaFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_cevreFragment"
+            app:destination="@id/cevreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaFragment"
+        android:name="com.msamil.msaStudio_CircleAreaAndCircumference.view.AreaFragment"
+        android:label="fragment_area"
+        tools:layout="@layout/fragment_area" >
+        <action
+            android:id="@+id/action_areaFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cevreFragment"
+        android:name="com.msamil.msaStudio_CircleAreaAndCircumference.view.CevreFragment"
+        android:label="fragment_cevre"
+        tools:layout="@layout/fragment_cevre" >
+        <action
+            android:id="@+id/action_cevreFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
